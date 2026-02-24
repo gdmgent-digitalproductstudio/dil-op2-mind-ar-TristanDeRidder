@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
     <title>Image Tracking</title>
 </head>
 
 <body>
+    <a href="./index.html" class="back_button">Go back</a>
+
     <a-scene mindar-image="imageTargetSrc: ./assets/targets.mind; missTolerance: 10" color-space="sRGB"
         renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
         device-orientation-permission-ui="enabled: false">
@@ -30,19 +33,14 @@
         <a-entity mindar-image-target="targetIndex: 1" id="studio-marker">
             <a-gltf-model src="#MotoGP" position="0 0 0" scale="0.1 0.1 0.1"></a-gltf-model>
         </a-entity>
-        
+
         <a-entity mindar-image-target="targetIndex: 2" id="studio-marker">
             <a-gltf-model src="#F1" position="0 0 0" scale="0.5 0.5 0.5"></a-gltf-model>
         </a-entity>
-        
+
         <a-entity mindar-image-target="targetIndex: 3" id="studio-marker">
-            <a-gltf-model src="#WEC" position="0 0 0" scale="50 50 50"></a-gltf-model>    
+            <a-gltf-model src="#WEC" position="0 0 0" scale="50 50 50"></a-gltf-model>
         </a-entity>
-
-        
-
-        
     </a-scene>
-</body>
 
 </html>

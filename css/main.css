@@ -1,0 +1,85 @@
+.home_body {
+  height: 100vh;
+  background-color: #121212;
+  color: white;
+}
+
+.home_body h1 {
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 36px;
+}
+
+.home_body p {
+  text-align: center;
+}
+
+.home_body div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 20px;
+}
+
+.home_body div a {
+  padding: 20rem;
+  background-color: #606060;
+  border: 0.1rem solid #ffffff;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.toggle-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #ccc;
+  color: #333;
+  border-color: #a04545;
+  border: 2px solid #999;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-button.selected {
+  background-color: #a2a2a2;
+  color: white;
+  border-color: #45a049;
+}
+
+.toggle-button:hover {
+  opacity: 0.9;
+}
+
+.back_button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #606060;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.back_button:hover {
+  background-color: #808080;
+}

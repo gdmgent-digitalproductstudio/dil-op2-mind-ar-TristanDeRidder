@@ -7,61 +7,28 @@
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-face-aframe.prod.js"></script>
     <script src="./scripts/face.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
     <title>Face tracking</title>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-        }
-
-        .toggle-button {
-            padding: 12px 24px;
-            font-size: 16px;
-            background-color: #ccc;
-            color: #333;
-            border: 2px solid #999;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        .toggle-button.selected {
-            background-color: #4CAF50;
-            color: white;
-            border-color: #45a049;
-        }
-
-        .toggle-button:hover {
-            opacity: 0.9;
-        }
-    </style>
 </head>
 
 <body>
-    <div>
+    <a href="./index.html" class="back_button">Go back</a>
+    <button id="helmet-button" class="toggle-button">Helmet</button>
 
-        <div>
-            <button id="helmet-button" class="toggle-button">Helmet</button>
-        </div>
-        <div>
-            <a-scene mindar-face embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights"
-                vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-face embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights"
+        vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
 
-                <a-assets>
-                    <a-asset-item id="helmet" src="./assets/Helmet.glb"></a-asset-item>
-                </a-assets>
+        <a-assets>
+            <a-asset-item id="helmet" src="./assets/Helmet.glb"></a-asset-item>
+        </a-assets>
 
 
-                <a-camera active="false" position="0 0 0"></a-camera>
+        <a-camera active="false" position="0 0 0"></a-camera>
 
-                <a-entity mindar-face-target="anchorIndex: 8">
-                    <a-entity class="helmet-button-entity" gltf-model="#helmet" position="0 0 0" scale="0.3 0.3 0.3"
-                        visibility="true"></a-entity>
-                </a-entity>
-            </a-scene>
-        </div>
-    </div>
-</body>
+        <a-entity mindar-face-target="anchorIndex: 8">
+            <a-entity class="helmet-button-entity" gltf-model="#helmet" position="0 0 0" scale="0.3 0.3 0.3"
+                visibility="true"></a-entity>
+        </a-entity>
+    </a-scene>
 
 </html>
